@@ -1,20 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Apache Knox HDFS Browser</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script type="text/javascript" src="knox.js"></script>
-    <script>document.addEventListener("load", listStatus());</script>
-  </head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
+		<link rel="stylesheet" href="css/skeleton.css">
+		<link rel="stylesheet" href="css/main.css">
+		
+		<title>KnoXplorer</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 
-  <body>
-    <h1>KnoXplorer</h1>
-    <h2 id="path" style="color:gray">---</h2>
-    <div id="listing"></div>
-    <div id="login" style="display: block">
-      <p style="display: block">Please login to Knox:</p>
-      <a style="display: block" id="login" href="https://www.local.com:8443/gateway/knoxsso/api/v1/websso?originalUrl=http://www.local.com:8000?topology=www.local.com:8443/gateway/sandbox/&path=/">Login</a>
-    </div>
-  </body>
+		<script type="text/javascript" src="knox.js"></script>
+		<script>document.addEventListener("load", listStatus());</script>
+	</head>
+	<body>
+		<header class="twelve columns bg-gray">
+			<a href="/"><h1 class="head">KnoXplorer</h1></a>
+		</header>
+		
+		<div class="container">
+			<div class="row">
+				<div class="eight columns card offset-by-two">
+					
+					<p style="text-align:center">Login to Explore HDFS</p>
+					<a href="https://sandbox.hortonworks.com:8443/gateway/knoxsso/api/v1/websso?originalUrl=http://sandbox.hortonworks.com:8000?topology=sandbox.hortonworks.com:8443/gateway/sandbox/&path=/" >
+						<div class="u-center-block button"><p>Login to Knox</p></div>
+						
+					</a>
+				</div>
+			</div>
+		</div>
+				
+		
+		<div class="card container ten columns offset-by-one">
+			<h2 id="path">path</h2>
+			<div id="listing"></div>
+			<div id="login" style="display: block">
+				<p style="display: block">Please login to Knox:</p>
+			</div>
+    	
+		</div>
+	
+	</body>
 </html>
+

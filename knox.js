@@ -47,7 +47,7 @@ function getWebHDFSPath() {
   var webhdfs;
   var topo = getParameterByName("topology");
   if (topo === "") {
-    webhdfs = "127.0.0.1:8443/gateway/sandbox/webhdfs/v1";
+    webhdfs = "sandbox.hortonworks.com:8443/gateway/sandbox/webhdfs/v1";
   }
   else {
     webhdfs = topo + "webhdfs/v1";
